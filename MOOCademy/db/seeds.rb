@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+5.times do
+ cour = Cour.create!(title: Faker::LordOfTheRings.character, description: Faker::Shakespeare.hamlet_quote)
+end
+
+15.times do
+ lesson = Lesson.create!(title: Faker::LordOfTheRings.character, body: Faker::Shakespeare.hamlet_quote, cour_id: rand(1..5))
+end
